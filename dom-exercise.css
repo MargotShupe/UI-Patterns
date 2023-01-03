@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+}
+
+.accordion {
+  width: 800px;
+}
+
+.accordion .contentBx {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.accordion .contentBx .label {
+  position: relative;
+  padding: 10px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.accordion .contentBx .label::before {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+
+.accordion .contentBx .label .fa-sort {
+  right: 12px;
+  position: absolute;
+  transition: transform 0.2s ease-in-out;
+}
+
+.accordion .contentBx .content {
+  background: white;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+.accordion .contentBx .content .img {
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  float: left;
+  padding: 5px;
+}
+
+.accordion .contentBx.active .content {
+  height: 150px;
+  padding: 10px;
+}
